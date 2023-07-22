@@ -1,5 +1,5 @@
 import "./styles.css";
-
+import Casma from "./components/casma";
 const valor = { mensaje: "mensaje", titulo: "jajaja" };
 
 const funcion = () => {
@@ -8,11 +8,13 @@ const funcion = () => {
 export default function App() {
   return (
     <>
-      <h2>{valor.mensaje}</h2>
-      <h3>{valor.titulo}</h3>
-      <h4>{JSON.stringify(valor)}</h4>
-      <p>{funcion()}</p>
-      <h1>Hola</h1>
+      <h1>Integrantes</h1>
+      <ul>
+        <li> <Casma></Casma></li>
+        <li></li>
+        <li></li>
+      </ul>
+      
     </>
   );
 }
