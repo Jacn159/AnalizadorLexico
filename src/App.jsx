@@ -1,6 +1,7 @@
 import Johan from "./components/Johan";
 import "./styles.css";
-
+import Casma from "./components/casma";
+import Magallanes from "./components/magallanes.jsx"
 const valor = { mensaje: "mensaje", titulo: "jajaja" };
 
 const funcion = () => {
@@ -13,6 +14,11 @@ export default function App() {
       <ul>
         <li><Johan></Johan></li>
       </ul>           
+        <li><Casma></Casma></li>
+        <li><Magallanes></Magallanes></li>
+        <li></li>
+      </ul>
+      
     </>
   );
 }
