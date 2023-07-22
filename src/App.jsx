@@ -1,24 +1,25 @@
-import Johan from "./components/Johan";
+// import Johan from "./components/Johan";
+import { useState } from "react";
+import Props from "./components/props";
 import "./styles.css";
-import Casma from "./components/casma";
-import Magallanes from "./components/magallanes.jsx"
+// import Casma from "./components/casma";
+// import Magallanes from "./components/magallanes.jsx";
 const valor = { mensaje: "mensaje", titulo: "jajaja" };
 
-const funcion = () => {
-  return "esto es una funcion";
-};
+let edad = 5 > 2 ? 15 : 20;
+
 export default function App() {
+  // me crea una variable, junto con su actualizador
+  // const [nombreVariable, actualizarValor]= useState(valorInicial);
+
+  const [varnombre, cambiarValor] = useState("toñito");
+
+
+
   return (
     <>
-      <h1>Integrantes:</h1>
-      <ul>
-        <li><Johan></Johan></li>
-      </ul>           
-        <li><Casma></Casma></li>
-        <li><Magallanes></Magallanes></li>
-        <li></li>
-      </ul>
-      
+      {/* le enviamos 2 props con los nombres, edad y nombre */}
+      <Props nombre={varnombre} edad={edad} cambiarValor={cambiarValor} ></Props>
     </>
   );
 }

@@ -1,0 +1,10 @@
+.boton {
+  padding: 2rem;
+  background-color: red;
+
+  width: 50px;
+}
+.boton:hover{
+    background-color: rgb(154, 154, 4);
+    color: black;
+}
