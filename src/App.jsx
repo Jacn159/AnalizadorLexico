@@ -1,5 +1,6 @@
 import "./styles.css";
 import Casma from "./components/casma";
+import Magallanes from "./components/magallanes.jsx"
 const valor = { mensaje: "mensaje", titulo: "jajaja" };
 
 const funcion = () => {
@@ -8,10 +9,10 @@ const funcion = () => {
 export default function App() {
   return (
     <>
-      <h1>Integrantes</h1>
+      <h1>Integrantes:</h1>
       <ul>
-        <li> <Casma></Casma></li>
-        <li></li>
+        <li><Casma></Casma></li>
+        <li><Magallanes></Magallanes></li>
         <li></li>
       </ul>
       
