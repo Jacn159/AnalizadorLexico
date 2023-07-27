@@ -55,23 +55,22 @@
 }
 
 .subfondo-left {
-  background-color: var(--primary-color);
   width: 92%;
   height: 82%;
   margin: auto;
   border-radius: 0.8rem;
-  background: var(--primary-color) var(--background-image-left) no-repeat center
-    center;
+
+  background: var(--modal-color-left) var(--background-image-left) no-repeat
+    center center;
   background-size: 15rem;
 }
 
 .subfondo-rigth {
-  background-color: var(--primary-color);
   width: 92%;
   height: 82%;
   margin: auto;
   border-radius: 0.8rem;
-  background: var(--primary-color) var(--background-image-rigth) no-repeat
+  background: var(--modal-color-rigth) var(--background-image-rigth) no-repeat
     center center;
   background-size: 15rem;
 }
@@ -79,7 +78,7 @@
 .circulo-left {
   position: absolute; /* Posición absoluta para colocar el círculo */
   bottom: -0rem; /* Ajustar la posición vertical del círculo dentro del div general */
-  left: -2rem; /* Ajustar la posición horizontal del círculo dentro del div general */
+  right: -2rem; /* Ajustar la posición horizontal del círculo dentro del div general */
   width: 16%;
   height: 13%;
   border-radius: 100%;
@@ -92,7 +91,7 @@
 .circulo-rigth {
   position: absolute; /* Posición absoluta para colocar el círculo */
   bottom: -0rem; /* Ajustar la posición vertical del círculo dentro del div general */
-  right: -2rem; /* Ajustar la posición horizontal del círculo dentro del div general */
+  left: -2rem; /* Ajustar la posición horizontal del círculo dentro del div general */
   width: 16%;
   height: 13%;
   border-radius: 100%;

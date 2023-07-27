@@ -1,12 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-const Input = ({ setvalue, valor }) => {
+const Input = ({ setvalue, valor, borrar, setborrar }) => {
   const [inputValue, setinputValue] = useState(valor);
+
   const handdleValue = (event) => {
     setinputValue(event.target.value);
     setvalue(event.target.value);
-
   };
+
+  useEffect(() => {
+    if (borrar) {
+      setinputValue(""); // Limpia el valor del textarea cuando borrar es verdadero
+      setborrar(false); // Vuelve a poner borrar a falso para evitar bucles infinitos
+    }
+  }, [borrar, setborrar]);
 
   return (
     <>

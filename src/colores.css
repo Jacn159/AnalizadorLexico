@@ -5,15 +5,28 @@
   --target-color-left: #c06c85;
   --target-color-rigth: #d56c8b;
 
-  --text-color: #ffffff;
+  --modal-color-rigth: #f27ea1;
+  --modal-color-left: #db819c;
 
+  --text-color: #ffffff;
+  --circle-left: #f27ea1;
+  --circle-right: #db819c;
+
+  --circle-border-left: #c06c85;
+  --circle-border-right: #d56c8b;
+  --background-image-circle-left: url(/enviar.png);
+  --background-image-circle-rigth: url(/borrar.png);
+  --background-image-rigth: url(/barbie.png);
   --background-image: url(/react.png);
+  --background-image-left: url(/barbieicon.png);
 }
 
 /* Modo Oscuro */
 [data-theme="dark"] {
   --background-color: #353535;
   --primary-color: #282828;
+  --modal-color-rigth: #282828;
+  --modal-color-left: #282828;
   --border-color: #2c2c2c;
   --target-color: #bf7963;
   --target-color-left: #bf7963;
@@ -21,11 +34,11 @@
   --text-color: #ffffff;
   --border: 0.5rem solid #684a4a;
   --background-image-left: url(/react.png);
-  
+
   --circle-left: #da9884;
-  --circle-right: #F1BA79;
+  --circle-right: #f1ba79;
   --circle-border-left: #bf7963;
-  --circle-border-right: #D5A56C;
+  --circle-border-right: #d5a56c;
   --background-image-circle-left: url(/enviar.png);
   --background-image-circle-rigth: url(/borrar.png);
   --background-image-rigth: url(/nuclear.png);

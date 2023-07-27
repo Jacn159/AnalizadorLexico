@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./tarjeta.css";
 import Input from "../input";
 import Output from "../output";
@@ -16,16 +16,20 @@ const Tarjeta = ({
   const enviarValor = () => {
     setborrar(false);
     setvalorOutput(valor);
-    console.log(borrar);
   };
   const borrarValor = () => {
     setborrar(true);
-
-    console.log(borrar);
   };
+
   const eventDefault = (event) => {
     event.preventDefault();
   };
+
+  useEffect(() => {
+    if (borrar) {
+      setborrar(true); // Vuelve a poner borrar a falso para evitar bucles infinitos
+    }
+  }, [borrar, setborrar]);
 
   return (
     <div className={"fondo__tarjeta-" + posicion}>
@@ -36,7 +40,12 @@ const Tarjeta = ({
       <div className={"subfondo-" + posicion}>
         {posicion == "left" ? (
           <form onSubmit={eventDefault}>
-            <Input setvalue={setvalor} valor={valor}></Input>
+            <Input
+              setvalue={setvalor}
+              valor={valor}
+              borrar={borrar}
+              setborrar={setborrar}
+            ></Input>
           </form>
         ) : (
           <Output value={valorOutput} borrar={borrar}></Output>
