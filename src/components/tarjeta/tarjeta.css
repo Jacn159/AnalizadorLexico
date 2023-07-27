@@ -1,0 +1,104 @@
+.fondo__tarjeta-left {
+  position: relative; /* Añadir posición relativa al div general */
+  background-color: var(--target-color-left);
+  width: 32%;
+  height: 38em;
+  border-radius: 2rem;
+  box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.212);
+  display: flex;
+  flex-direction: column;
+}
+.fondo__tarjeta-rigth {
+  position: relative; /* Añadir posición relativa al div general */
+  background-color: var(--target-color-rigth);
+  width: 32%;
+  height: 38em;
+  border-radius: 2rem;
+  box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.212);
+  display: flex;
+  flex-direction: column;
+}
+
+.header__tarjeta-left {
+  background-color: var(--primary-color);
+  width: 100%;
+  border-bottom: var(--border);
+  height: 3.5rem;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.header__tarjeta-rigth {
+  flex-direction: row-reverse;
+  background-color: var(--primary-color);
+  width: 100%;
+  border-bottom: var(--border);
+  height: 3.5rem;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: end;
+}
+.puntos-left {
+  width: 4.5rem;
+  height: 1rem;
+  margin-left: 1rem;
+}
+.puntos-rigth {
+  width: 4.5rem;
+  height: 1rem;
+  margin-right: 1rem;
+}
+
+.subfondo-left {
+  background-color: var(--primary-color);
+  width: 92%;
+  height: 82%;
+  margin: auto;
+  border-radius: 0.8rem;
+  background: var(--primary-color) var(--background-image-left) no-repeat center
+    center;
+  background-size: 15rem;
+}
+
+.subfondo-rigth {
+  background-color: var(--primary-color);
+  width: 92%;
+  height: 82%;
+  margin: auto;
+  border-radius: 0.8rem;
+  background: var(--primary-color) var(--background-image-rigth) no-repeat
+    center center;
+  background-size: 15rem;
+}
+
+.circulo-left {
+  position: absolute; /* Posición absoluta para colocar el círculo */
+  bottom: -0rem; /* Ajustar la posición vertical del círculo dentro del div general */
+  left: -2rem; /* Ajustar la posición horizontal del círculo dentro del div general */
+  width: 16%;
+  height: 13%;
+  border-radius: 100%;
+  background: var(--circle-left) var(--background-image-circle-left) no-repeat
+    center center;
+  background-size: 87%;
+  z-index: 2;
+  border: 10px solid var(--circle-border-left);
+}
+.circulo-rigth {
+  position: absolute; /* Posición absoluta para colocar el círculo */
+  bottom: -0rem; /* Ajustar la posición vertical del círculo dentro del div general */
+  right: -2rem; /* Ajustar la posición horizontal del círculo dentro del div general */
+  width: 16%;
+  height: 13%;
+  border-radius: 100%;
+  background: var(--circle-right) var(--background-image-circle-rigth) no-repeat
+    center center;
+  background-size: 87%;
+  z-index: 2;
+  border: 10px solid var(--circle-border-right);
+}

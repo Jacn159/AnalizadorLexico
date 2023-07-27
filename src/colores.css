@@ -1,0 +1,34 @@
+/* Modo Claro (valores predeterminados) */
+:root {
+  --background-color: #f8b2c6;
+  --primary-color: #6c567c;
+  --target-color-left: #c06c85;
+  --target-color-rigth: #d56c8b;
+
+  --text-color: #ffffff;
+
+  --background-image: url(/react.png);
+}
+
+/* Modo Oscuro */
+[data-theme="dark"] {
+  --background-color: #353535;
+  --primary-color: #282828;
+  --border-color: #2c2c2c;
+  --target-color: #bf7963;
+  --target-color-left: #bf7963;
+  --target-color-rigth: #d5a56c;
+  --text-color: #ffffff;
+  --border: 0.5rem solid #684a4a;
+  --background-image-left: url(/react.png);
+  
+  --circle-left: #da9884;
+  --circle-right: #F1BA79;
+  --circle-border-left: #bf7963;
+  --circle-border-right: #D5A56C;
+  --background-image-circle-left: url(/enviar.png);
+  --background-image-circle-rigth: url(/borrar.png);
+  --background-image-rigth: url(/nuclear.png);
+}
+
+/* Resto de tus estilos aquí */
