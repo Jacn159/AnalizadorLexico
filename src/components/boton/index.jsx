@@ -26,8 +26,8 @@ function Boton() {
   return (
     <div>
       <input id="toggle-button" type="checkbox"></input>
-      <label for="toggle-button" onClick={toggleDarkMode}>
-        <div class="sun-moon"></div>
+      <label htmlFor="toggle-button" onClick={toggleDarkMode}>
+        <div className="sun-moon"></div>
       </label>
     </div>
   );

@@ -6,7 +6,7 @@ import Tarjeta from "./components/tarjeta";
 
 const AppAnalizadorLexico = () => {
   const [valor, setvalor] = useState("");
-  const [valorOutput, setvalorOutput] = useState(valor);
+  const [valorOutput, setvalorOutput] = useState("");
   const [borrar, setborrar] = useState(false);
   return (
     <>

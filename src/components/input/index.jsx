@@ -11,6 +11,7 @@ const Input = ({ setvalue, valor, borrar, setborrar }) => {
   useEffect(() => {
     if (borrar) {
       setinputValue(""); // Limpia el valor del textarea cuando borrar es verdadero
+      setvalue("");
       setborrar(false); // Vuelve a poner borrar a falso para evitar bucles infinitos
     }
   }, [borrar, setborrar]);
