@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
-
-
+import React, { useState, useEffect } from "react";
+import "./boton.css";
 function Boton() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -26,8 +25,10 @@ function Boton() {
 
   return (
     <div>
-      {/* Tu contenido de la aplicación aquí */}
-      <button onClick={toggleDarkMode}>Cambiar Modo</button>
+      <input id="toggle-button" type="checkbox"></input>
+      <label for="toggle-button" onClick={toggleDarkMode}>
+        <div class="sun-moon"></div>
+      </label>
     </div>
   );
 }

@@ -7,11 +7,13 @@
 
   --modal-color-rigth: #f27ea1;
   --modal-color-left: #db819c;
-
+  --imagen-left: url(/barbieToy.png);
+  --imagen-right: url(/kenToy.png);
+  --title-color: #de729c;
   --text-color: #ffffff;
   --circle-left: #f27ea1;
   --circle-right: #db819c;
-
+  --letter-color: black;
   --circle-border-left: #c06c85;
   --circle-border-right: #d56c8b;
   --background-image-circle-left: url(/enviar.png);
@@ -19,10 +21,23 @@
   --background-image-rigth: url(/barbie.png);
   --background-image: url(/react.png);
   --background-image-left: url(/barbieicon.png);
+  --font: "barbie", sans-serif;
+  --spacing: 0.3rem;
+}
+
+@font-face {
+  font-family: "barbie";
+  src: url("./barbie.ttf") format("truetype"); /* Cambia la ruta al archivo de fuente descargado */
 }
 
 /* Modo Oscuro */
 [data-theme="dark"] {
+  --spacing: 0.5rem;
+  --font: "Inter", sans-serif;
+  --title-color: #ffa488;
+  --letter-color: white;
+  --imagen-left: "none";
+  --imagen-right: "none";
   --background-color: #353535;
   --primary-color: #282828;
   --modal-color-rigth: #282828;

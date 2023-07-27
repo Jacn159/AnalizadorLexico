@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h2>Ingresa tu código:</h2>
+    <textarea id="codeInput" rows="10" cols="50"></textarea>
+    <br />
+    <button onclick="analyzeCode()">Analizar</button>
+    <br />
+    <h2>Resultado:</h2>
+    <textarea id="resultText" rows="10" cols="50" readonly></textarea>
 
-  <h2>Ingresa tu código:</h2>
-  <textarea id="codeInput" rows="10" cols="50"></textarea>
-  <br>
-  <button onclick="analyzeCode()">Analizar</button>
-  <br>
-  <h2>Resultado:</h2>
-  <textarea id="resultText" rows="10" cols="50" readonly></textarea>
-
-  <script src="logic.js"></script>
-</body>
+    <script src="logic.js"></script>
+  </body>
 </html>
-
-

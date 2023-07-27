@@ -1,0 +1,29 @@
+.salida {
+  margin: auto;
+  padding: 20px;
+  font-size: 19px;
+  color: var(--letter-color);
+  width: 100%;
+  max-height: 31rem;
+  box-sizing: border-box;
+  overflow: auto;
+  line-height: 32px;
+}
+
+p {
+  width: 100%;
+  word-wrap: break-word;
+}
+
+.salida::-webkit-scrollbar {
+  width: 12px; /* Ancho del scrollbar vertical */
+}
+
+.salida::-webkit-scrollbar-thumb {
+  background-color: white; /* Color del thumb (agarre) del scrollbar */
+  border-radius: 6px; /* Borde redondeado del thumb */
+}
+
+.salida::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Color del thumb cuando se pasa el cursor sobre él */
+}

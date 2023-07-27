@@ -1,7 +1,7 @@
 .fondo__tarjeta-left {
   position: relative; /* Añadir posición relativa al div general */
   background-color: var(--target-color-left);
-  width: 32%;
+  width: 30rem;
   height: 38em;
   border-radius: 2rem;
   box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.212);
@@ -11,7 +11,7 @@
 .fondo__tarjeta-rigth {
   position: relative; /* Añadir posición relativa al div general */
   background-color: var(--target-color-rigth);
-  width: 32%;
+  width: 30rem;
   height: 38em;
   border-radius: 2rem;
   box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.212);
@@ -64,7 +64,11 @@
     center center;
   background-size: 15rem;
 }
-
+.title {
+  font-family: var(--font);
+  letter-spacing: var(--spacing);
+  font-size: 20px;
+}
 .subfondo-rigth {
   width: 92%;
   height: 82%;
@@ -100,4 +104,25 @@
   background-size: 87%;
   z-index: 2;
   border: 10px solid var(--circle-border-right);
+}
+
+.imagen-left {
+  position: absolute; /* Posición absoluta para colocar el círculo */
+  bottom: -5rem; /* Ajustar la posición vertical del círculo dentro del div general */
+  left: -2rem; /* Ajustar la posición horizontal del círculo dentro del div general */
+  width: 10rem;
+  height: 32rem;
+  background: var(--imagen-left) no-repeat center center;
+  background-size: 100%;
+  z-index: 2;
+}
+.imagen-rigth {
+  position: absolute; /* Posición absoluta para colocar el círculo */
+  bottom: -3.8rem; /* Ajustar la posición vertical del círculo dentro del div general */
+  right: -5rem; /* Ajustar la posición horizontal del círculo dentro del div general */
+  width: 9rem;
+  height: 30rem;
+  background: var(--imagen-right) no-repeat center center;
+  background-size: 100%;
+  z-index: 2;
 }

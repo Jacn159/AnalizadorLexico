@@ -52,9 +52,11 @@ const Tarjeta = ({
         )}
       </div>
 
+      <div className={"imagen-" + posicion}></div>
+
       <div
         className={"circulo-" + posicion}
-        onClick={titulo == "Input" ? enviarValor : borrarValor}
+        onClick={titulo == "INPUT" ? enviarValor : borrarValor}
       ></div>
     </div>
   );

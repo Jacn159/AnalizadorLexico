@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Input from "./components/input";
-import BotonMode from "./components/boton";
+
 import Header from "./components/header";
 import Tarjeta from "./components/tarjeta";
 
@@ -11,11 +11,11 @@ const AppAnalizadorLexico = () => {
   return (
     <>
       <Header></Header>
-      <BotonMode></BotonMode>
+
       <main>
         {" "}
         <Tarjeta
-          titulo={"Input"}
+          titulo={"INPUT"}
           posicion={"left"}
           valor={valor}
           setvalor={setvalor}
@@ -24,7 +24,7 @@ const AppAnalizadorLexico = () => {
           setborrar={setborrar}
         ></Tarjeta>
         <Tarjeta
-          titulo={"Output"}
+          titulo={"OUTPUT"}
           posicion={"rigth"}
           valor={valor}
           valorOutput={valorOutput}

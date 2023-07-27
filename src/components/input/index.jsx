@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import "./input.css"
 const Input = ({ setvalue, valor, borrar, setborrar }) => {
   const [inputValue, setinputValue] = useState(valor);
 
