@@ -16,7 +16,6 @@ label {
   width: 110px;
 }
 
-
 label .sun-moon {
   background: var(--blue);
   border-radius: 50%;
@@ -28,4 +27,11 @@ label .sun-moon {
 
 #toggle-button:checked + label .sun-moon {
   transform: translateX(72px);
+}
+
+@media screen and (max-width: 768px) {
+  .cambiarmodo {
+    scale: 0.5;
+    align-self: center;
+  }
 }

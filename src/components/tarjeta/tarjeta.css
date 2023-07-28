@@ -114,14 +114,13 @@
   width: 10rem;
   height: 32rem;
   background: var(--imagen-left) no-repeat center bottom;
-  display: var(--display) ;
+  display: var(--display);
   background-size: 100%;
   z-index: 2;
   box-sizing: border-box;
-
 }
 .imagen-rigth {
-  display: var(--display) ;
+  display: var(--display);
   position: absolute; /* Posición absoluta para colocar el círculo */
   bottom: 0; /* Ajustar la posición vertical del círculo dentro del div general */
   right: -5rem; /* Ajustar la posición horizontal del círculo dentro del div general */
@@ -131,5 +130,27 @@
   background-size: 100%;
   z-index: 2;
   box-sizing: border-box;
+}
 
+@media screen and (max-width: 768px) {
+  .imagen-rigth {
+    display: var(--display);
+    position: absolute; /* Posición absoluta para colocar el círculo */
+    bottom: 0; /* Ajustar la posición vertical del círculo dentro del div general */
+    right: -2rem; /* Ajustar la posición horizontal del círculo dentro del div general */
+    width: 9rem;
+    height: 30rem;
+    background: var(--imagen-right) no-repeat center bottom;
+    background-size: 100%;
+    z-index: 2;
+    box-sizing: border-box;
+  }
+  .circulo-left {
+    bottom: -0rem; /* Ajustar la posición vertical del círculo dentro del div general */
+    right: -2rem; /* Ajustar la posición horizontal del círculo dentro del div general */
+  }
+  .circulo-rigth {
+    bottom: -0rem; /* Ajustar la posición vertical del círculo dentro del div general */
+    left: -2rem; /* Ajustar la posición horizontal del círculo dentro del div general */
+  }
 }

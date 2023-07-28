@@ -6,3 +6,12 @@ main {
   display: flex;
   justify-content: space-around;
 }
+
+@media screen and (max-width: 768px) {
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    scale: 0.8;
+    gap: 5rem;
+  }
+}

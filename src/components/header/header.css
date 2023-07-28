@@ -26,3 +26,34 @@
   scale: 1.1;
   transition: 0.5s linear;
 }
+@media screen and (max-width: 768px) {
+  .header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    height: 200px;
+  }
+  .music {
+    height: auto;
+    width: 80px;
+    order: 1;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .titulo {
+    order: 0;
+    margin: auto;
+    order: -1;
+  }
+  .contenedor-music {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    align-items: center;
+  }
+}

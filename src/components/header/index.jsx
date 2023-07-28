@@ -5,11 +5,16 @@ import Sonido from "../audio";
 const Header = () => {
   return (
     <header className="header">
-      <div className="music">
-        <Sonido></Sonido>
+      <div className="contenedor-music">
+        <div className="music">
+          <Sonido></Sonido>
+        </div>
       </div>
+
       <h1 className="titulo">ANALIZADOR LEXICO</h1>
-      <Boton ></Boton>
+      <div className="contenedor-music">
+        <Boton></Boton>
+      </div>
     </header>
   );
 };

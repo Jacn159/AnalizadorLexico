@@ -25,7 +25,9 @@ const LoadingBarbie = ({ setmostrar }) => {
           : "url(/logobarbie.png) no-repeat center center",
         "--size-loading": isDarkMode ? "100%" : "30%",
       }}
-    ></div>
+    >
+      <div className="img__movile"></div>
+    </div>
   );
 };
 

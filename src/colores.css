@@ -57,10 +57,8 @@
   --border: 0.5rem solid #684a4a;
   --background-image-left: url(/react.png);
 
-
   --background-image-loading: red;
 
-  
   --circle-left: #da9884;
   --circle-right: #f1ba79;
   --circle-border-left: #bf7963;
@@ -68,7 +66,6 @@
   --background-image-circle-left: url(/enviar.png);
   --background-image-circle-rigth: url(/borrar.png);
   --background-image-rigth: url(/nuclear.png);
-
 }
 
 /* Resto de tus estilos aquí */
