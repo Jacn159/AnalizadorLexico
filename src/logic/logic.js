@@ -1,3 +1,15 @@
+
+
+
+function  reconocerSwitch() {
+  
+  return Boolean;
+}
+
+
+
+
+
 function analyzeCode(linea) {
   // Inicializando algunas variables que utilizaremos luego
   var estado = 1;

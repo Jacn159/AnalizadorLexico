@@ -6,14 +6,18 @@
   width: 100%;
   max-height: 31rem;
   box-sizing: border-box;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-wrap: break-word;
   line-height: 32px;
   font-family: inter, sans-serif;
 }
 
 p {
-  height: 35rem;
-  word-wrap: wrap;
+  height: auto;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  width: 300px;
+
 }
 
 .salida::-webkit-scrollbar {
