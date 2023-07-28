@@ -23,6 +23,9 @@
   --background-image-left: url(/barbieicon.png);
   --font: "barbie", sans-serif;
   --spacing: 0.3rem;
+  --blue: #f27ea1;
+  --background-color-boton: rgba(138, 112, 156, 0.377);
+  --fondo-loading: url(/barbie.png) no-repeat center center;
 }
 
 @font-face {
@@ -32,6 +35,8 @@
 
 /* Modo Oscuro */
 [data-theme="dark"] {
+  --background-color-boton: #353535;
+  --blue: #bf7963;
   --spacing: 0.5rem;
   --font: "Inter", sans-serif;
   --title-color: #ffa488;
@@ -50,6 +55,10 @@
   --border: 0.5rem solid #684a4a;
   --background-image-left: url(/react.png);
 
+
+  --background-image-loading: red;
+
+  
   --circle-left: #da9884;
   --circle-right: #f1ba79;
   --circle-border-left: #bf7963;
@@ -57,6 +66,7 @@
   --background-image-circle-left: url(/enviar.png);
   --background-image-circle-rigth: url(/borrar.png);
   --background-image-rigth: url(/nuclear.png);
+
 }
 
 /* Resto de tus estilos aquí */

@@ -4,14 +4,13 @@ import Input from "./components/input";
 import Header from "./components/header";
 import Tarjeta from "./components/tarjeta";
 
-const AppAnalizadorLexico = () => {
+const AppAnalizadorLexico = ({ setmostrar }) => {
   const [valor, setvalor] = useState("");
   const [valorOutput, setvalorOutput] = useState("");
   const [borrar, setborrar] = useState(false);
   return (
     <>
       <Header></Header>
-
       <main>
         {" "}
         <Tarjeta

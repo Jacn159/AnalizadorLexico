@@ -1,0 +1,14 @@
+.loading {
+  background: var(
+    --imagen-loading
+  ); /* Cambia esto a la variable que desees para el fondo predeterminado */
+  /* background: var(
+    --background-image-loading
+  ); Agrega esta regla para el fondo en modo oscuro */
+  height: 100vh;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: var(--size-loading);
+}
