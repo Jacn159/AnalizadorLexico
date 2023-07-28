@@ -1,0 +1,36 @@
+.audio-container {
+  display: var(--display);
+  flex-direction: column;
+  align-items: center;
+}
+
+.audio-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.volume-controls {
+  display: flex;
+  align-items: center;
+  color: black;
+  text-align: baseline;
+  flex-direction: row-reverse;
+  background-color: aqua;
+  margin: 2rem;
+  width: 300px;
+}
+/* Para navegadores basados en WebKit (como Chrome y Safari) */
+.audioton {
+  background-color: var(--background-color-boton);
+  color: var(--letter-color);
+  padding: 0.5rem;
+  border-radius: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.audioton img{
+  width: 20px;
+}

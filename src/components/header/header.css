@@ -12,7 +12,10 @@
 .music {
   height: 100%;
   width: 110px;
+  display: flex;
+  align-items: center;
 }
+
 .titulo {
   font-family: monospace;
   font-size: 28px;

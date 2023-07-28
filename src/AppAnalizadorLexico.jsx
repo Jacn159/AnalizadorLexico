@@ -8,6 +8,7 @@ const AppAnalizadorLexico = ({ setmostrar }) => {
   const [valor, setvalor] = useState("");
   const [valorOutput, setvalorOutput] = useState("");
   const [borrar, setborrar] = useState(false);
+
   return (
     <>
       <Header></Header>

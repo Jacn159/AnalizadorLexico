@@ -1,4 +1,4 @@
-const analyzeCode = (linea) => {
+function analyzeCode(linea) {
   // Inicializando algunas variables que utilizaremos luego
   var estado = 1;
   var palabra = "";
@@ -7,40 +7,44 @@ const analyzeCode = (linea) => {
 
   // Variable para indicar si se está analizando una cadena
   var analizandoCadena = false;
+  // Variable para llevar el control del estado de las llaves
+  var llavesAbiertas = 0;
 
   // Creando el array y llenándolo con las palabras reservadas
   var reservadas = [
-    "p_condicionalSi",
-    "p_condicionalSino",
-    "p_condicionalSiSino",
-    "p_buclePara",
-    "p_bucleMientras",
-    "p_bucleHasta",
-    "p_bucleRomper",
-    "p_bucleContinuar",
-    "p_seleccionSwitch",
-    "p_seleccionCaso",
-    "p_seleccionPredeterminado",
-    "p_excepcionIntentar",
-    "p_excepcionCapturar",
-    "p_excepcionFinalmente",
-    "_agregarElementoLista",
-    "p_eliminarElementoLista",
-    "p_funcion",
-    "p_funcionMath",
-    "p_funcionSeno",
-    "p_valorPi",
-    "p_funcionCoseno",
-    "p_funcionTangente",
-    "p_operadorPotencia",
-    "p_funcionRaizCuadrada",
-    "p_funcionValorAbsoluto",
-    "p_funcionRedondeo",
-    "p_funcionSuelo",
-    "p_funcionTecho",
-    "p_funcionAleatoria",
-    "p_funcionValorMaximo",
-    "p_funcionValorMinimo",
+    "if",
+    "else",
+    "elif",
+    "while",
+    "for",
+    "do",
+    "break",
+    "continue",
+    "switch",
+    "case",
+    "default",
+    "try",
+    "catch",
+    "finally",
+    "list",
+    "addEl",
+    "removeE",
+    "Math",
+    "sin",
+    "pi",
+    "cos",
+    "tan",
+    "sqrt",
+    "abs",
+    "round",
+    "floor",
+    "ceil",
+    "randomGen",
+    "maxVal",
+    "TRUE",
+    "FALSE",
+    "cons",
+    "send",
   ];
 
   // Añadiendo al final de la cadena un espacio vacío que servirá para poder identificar que ya no habrá nada más que analizar
@@ -57,14 +61,14 @@ const analyzeCode = (linea) => {
     else if (linea[i] == "#") {
       mensaje += "Es un numeral" + ": " + linea[i] + "\n";
     }
-    // Analiza si el caracter es '{'
-    else if (linea[i] == "{") {
-      mensaje += "Es una llave de inicio" + ": " + linea[i] + "\n";
-    }
-    // Analiza si el caracter es '}'
-    else if (linea[i] == "}") {
-      mensaje += "Es una llave final" + ": " + linea[i] + "\n";
-    }
+    // // Analiza si el caracter es '{'
+    // else if (linea[i] == "{") {
+    //     mensaje += "Es una llave de inicio" + ": " + linea[i] + "\n";
+    // }
+    // // Analiza si el caracter es '}'
+    // else if (linea[i] == "}") {
+    //     mensaje += "Es una llave final" + ": " + linea[i] + "\n";
+    // }
     // Analiza si el caracter es '('
     else if (linea[i] == "(") {
       mensaje += "Es un delimitador de inicio" + ": " + linea[i] + "\n";
@@ -104,7 +108,6 @@ const analyzeCode = (linea) => {
     else if (linea[i] == "not") {
       mensaje += "Es un operador lógico de negación" + ": " + linea[i] + "\n";
     }
-
     // Si encuentra un comentario de una sola línea (comienza con '//')
     if (linea[i] === "/" && linea[i + 1] === "/") {
       // Buscamos el índice donde termina el comentario (fin de la línea)
@@ -121,7 +124,6 @@ const analyzeCode = (linea) => {
       // Actualizamos el índice 'i' para que salte al final del comentario
       i = finComentario;
     }
-
     //Analiza si el caracter es '/'
     else if (linea[i] == "/") {
       // Si el que le sigue es un '=', entonces es un operador aritmético de asignación para la división
@@ -138,7 +140,6 @@ const analyzeCode = (linea) => {
         mensaje += "Es un operador de división: " + "/" + "\n";
       }
     }
-
     // Analiza si el caracter es '='
     else if (linea[i] == "=") {
       // Si el que sigue también es '=', entonces es un operador de comparación
@@ -151,7 +152,6 @@ const analyzeCode = (linea) => {
         mensaje += "Es un operador de asignación: " + "=" + "\n";
       }
     }
-
     // Se analiza si el caracter es '+'
     else if (linea[i] == "+") {
       // Si el que sigue es '=', entonces es un operador aritmético de asignación suma
@@ -170,7 +170,6 @@ const analyzeCode = (linea) => {
         mensaje += "Es un operador aritmético de suma: " + "+" + "\n";
       }
     }
-
     // Se analiza si el caracter es '-'
     else if (linea[i] == "-") {
       // Si el que sigue es '=', entonces es un operador aritmético de asignación resta
@@ -189,7 +188,6 @@ const analyzeCode = (linea) => {
         mensaje += "Es un operador aritmético de resta: " + "-" + "\n";
       }
     }
-
     // Se analiza si el caracter es '*'
     else if (linea[i] == "*") {
       // Si el que sigue es '=', entonces es un operador aritmético de asignación de multiplicación
@@ -203,7 +201,6 @@ const analyzeCode = (linea) => {
         mensaje += "Es un operador aritmético de multiplicación: " + "*" + "\n";
       }
     }
-
     // Se analiza si el caracter es '%'
     else if (linea[i] == "%") {
       // Si el que sigue es '=', entonces es un operador aritmético de asignación de resto
@@ -216,7 +213,6 @@ const analyzeCode = (linea) => {
         mensaje += "Es un operador aritmético de resto: " + "%" + "\n";
       }
     }
-
     // Se analiza si el caracter es '^'
     else if (linea[i] == "^") {
       // Si el que sigue es '=', entonces es un operador aritmético de asignación de potencia
@@ -234,7 +230,6 @@ const analyzeCode = (linea) => {
         mensaje += "Es un operador aritmético de potencia: " + "^" + "\n";
       }
     }
-
     // Se analiza si el caracter es '&'
     else if (linea[i] == "&") {
       // Si el que sigue es '=', entonces es un operador aritmético de asignación AND
@@ -252,7 +247,6 @@ const analyzeCode = (linea) => {
         mensaje += "Es un operador lógico Y: " + "&" + "\n";
       }
     }
-
     // Se analiza si el caracter es '|'
     else if (linea[i] == "|") {
       // Si el que sigue es '|', y el siguiente de este también es '|', entonces es un operador condicional O
@@ -275,7 +269,6 @@ const analyzeCode = (linea) => {
         mensaje += "No es un componente léxico: " + "|" + "\n";
       }
     }
-
     // Se analiza si el caracter es '>'
     else if (linea[i] == ">") {
       // Si el que sigue es '>', y el siguiente de este es '=', entonces es un operador de asignación de desplazamiento menor.
@@ -300,7 +293,6 @@ const analyzeCode = (linea) => {
         mensaje += "Es un operador de comparación mayor: " + ">" + "\n";
       }
     }
-
     // Se analiza si el caracter es '<'
     else if (linea[i] == "<") {
       // Si el que sigue es '<', y el siguiente de este es '=', entonces es un operador de asignación de desplazamiento menor.
@@ -340,12 +332,11 @@ const analyzeCode = (linea) => {
         i++;
       }
       if (reservadas.includes(palabra)) {
-        mensaje += "Es una palabra reservada" + "\n";
+        mensaje += "Es una palabra reservada: " + palabra + "\n";
       } else {
         mensaje += "Es un identificador" + ": " + palabra + "\n";
       }
     }
-
     // Analiza si el caracter es '"'
     else if (linea[i] == '"') {
       // Si encontramos una comilla doble, buscamos la siguiente comilla doble
@@ -367,8 +358,29 @@ const analyzeCode = (linea) => {
 
       palabra = ""; // Reiniciamos la variable palabra
     }
+    // Analiza si el caracter es '{', incrementa el contador de llaves abiertas
+    else if (linea[i] == "{") {
+      mensaje += "Es una llave de inicio" + ": " + linea[i] + "\n";
+      llavesAbiertas++;
+    }
+    // Analiza si el caracter es '}', decrementa el contador de llaves abiertas
+    else if (linea[i] == "}") {
+      mensaje += "Es una llave final" + ": " + linea[i] + "\n";
+      llavesAbiertas--;
+    }
   }
+  // Al final de la cadena, verifica si todas las llaves se cerraron adecuadamente
+  if (llavesAbiertas > 0) {
+    mensaje +=
+      "¡Falta cerrar " + llavesAbiertas + " llave(s) en el bloque if!\n";
+  } else if (llavesAbiertas < 0) {
+    mensaje +=
+      "¡Se cerró " +
+      Math.abs(llavesAbiertas) +
+      " llave(s) de más en el bloque if!\n";
+  }
+
   return mensaje;
-};
+}
 
 export default analyzeCode;

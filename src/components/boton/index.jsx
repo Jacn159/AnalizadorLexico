@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./boton.css";
-function Boton() {
+function Boton({}) {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
@@ -13,6 +13,7 @@ function Boton() {
 
   const toggleDarkMode = () => {
     setIsDarkMode((prevMode) => !prevMode);
+
   };
 
   useEffect(() => {

@@ -114,12 +114,14 @@
   width: 10rem;
   height: 32rem;
   background: var(--imagen-left) no-repeat center bottom;
+  display: var(--display) ;
   background-size: 100%;
   z-index: 2;
   box-sizing: border-box;
 
 }
 .imagen-rigth {
+  display: var(--display) ;
   position: absolute; /* Posición absoluta para colocar el círculo */
   bottom: 0; /* Ajustar la posición vertical del círculo dentro del div general */
   right: -5rem; /* Ajustar la posición horizontal del círculo dentro del div general */

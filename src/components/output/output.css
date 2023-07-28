@@ -8,11 +8,12 @@
   box-sizing: border-box;
   overflow: auto;
   line-height: 32px;
+  font-family: inter, sans-serif;
 }
 
 p {
-  width: 100%;
-  word-wrap: break-word;
+  height: 35rem;
+  word-wrap: wrap;
 }
 
 .salida::-webkit-scrollbar {

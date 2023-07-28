@@ -6,6 +6,7 @@
     --background-image-loading
   ); Agrega esta regla para el fondo en modo oscuro */
   height: 100vh;
+  width: 100%;
   color: black;
   display: flex;
   align-items: center;
